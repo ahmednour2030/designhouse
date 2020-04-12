@@ -3,10 +3,12 @@
 namespace App\models;
 
 use App\Models\User;
+use App\Models\Traits\Likeable;
 use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
+    use Likeable;
     protected $fillable = [
         'body',
         'user_id'

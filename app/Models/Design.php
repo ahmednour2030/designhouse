@@ -52,10 +52,4 @@ class Design extends Model
         return Storage::disk($this->disk)
                         ->url("uploads/designs/{$size}/".$this->image);
     }
-
-    public function likes()
-    {
-        return $this->morphMany(Like::class, 'likeable')
-        ->orderBy('created_at', 'asc');
-    }
 }
